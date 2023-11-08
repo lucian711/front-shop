@@ -9,7 +9,7 @@ function Routes() {
     {
       path: "/",
       element: <Layout />,
-      children: [{ path: "/pages/shop", element: <Shop /> }]
+      children: [{ path: "/shop", element: <Shop /> }]
     },
     {
       path: "login",

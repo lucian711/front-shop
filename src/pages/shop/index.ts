@@ -1,3 +1,3 @@
-import shop from "./shopContentsParent";
+import Shop from "./shopContentsParent";
 
-export { shop };
+export { Shop };

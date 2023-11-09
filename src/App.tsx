@@ -5,17 +5,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Router from "./router";
 import { globalTheme } from "./theme";
 
+import { AuthProvider } from "@/store/context/auth-context";
+
 const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="app">
-      <MantineProvider theme={globalTheme}>
-        <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <MantineProvider theme={globalTheme}>
           <Router />
-        </QueryClientProvider>
-      </MantineProvider>
-    </div>
+        </MantineProvider>
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }
 

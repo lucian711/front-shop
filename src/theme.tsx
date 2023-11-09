@@ -8,7 +8,7 @@ import { createTheme, MantineThemeOverride } from "@mantine/core";
 // eslint-disable-next-line react-refresh/only-export-components
 export const globalTheme: MantineThemeOverride = createTheme({
   fontFamily:
-    "Pretendard, -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji",
+    "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji",
   /** break */
   breakpoints: {
     xs: "22.4375rem",

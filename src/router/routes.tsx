@@ -2,14 +2,20 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Layout from "../layout";
 import { Login } from "../pages/login";
-import { Shop } from "../pages/shop";
+
+import { routesCompression } from "./routesCompression";
+
+import { ErrorBoundary } from "@/components";
+
+const childrenArray = routesCompression;
 
 function Routes() {
   return createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
-      children: [{ path: "/shop", element: <Shop /> }]
+      errorElement: <ErrorBoundary />,
+      children: childrenArray
     },
     {
       path: "login",

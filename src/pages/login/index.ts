@@ -1,3 +1,3 @@
-import Login from "./loginContentsParent";
+import Login from "./login";
 
 export { Login };

@@ -1,8 +1,8 @@
 {
   "categories": [
     {
-      "name": "SHOP",
-      "path": "/shop"
+      "name": "상품",
+      "path": "/product"
     }
   ]
 }

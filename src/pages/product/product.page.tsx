@@ -1,6 +1,8 @@
-import { Grid, Text, Image, Select, Flex } from "@mantine/core";
+import { Grid, Text, Image, Select, Flex, Box } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
+
+import styles from "./product.module.css";
 
 import { getData, productsType } from "@/store";
 
@@ -49,10 +51,12 @@ export function ProductList() {
           placeholder="카테고리 선택"
         />
       </Flex>
-      <Grid grow gutter="xl" mt={40}>
+      <Grid gutter="xl" mt={40} className="grid">
         {filteredProducts.map((item: productsType) => (
-          <Grid.Col span={{ base: 12, md: 6, lg: 3 }} key={item.id}>
-            <Image src={item.image} h={480} />
+          <Grid.Col span={{ base: 12, md: 6, lg: 3, xl: 2 }} key={item.id}>
+            <Box className={styles.box}>
+              <Image src={item.image} h={480} className={styles.image} />
+            </Box>
             <Text lineClamp={1} fw={700}>
               {item.title}
             </Text>
